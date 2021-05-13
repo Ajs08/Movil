@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MotoPosadApp</string>
+    <string name="Bienvenida">Bienvenido, Ingrese su usuario y contraseña</string>
+    <string name="title_activity_maps">Map</string>
+</resources>
