@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
             usuario.setError("El nombre no puede estar en vacio");
         }else{
             if (txtcontra.isEmpty()){
-                pass.setError("Contraseña vacia");
+                pass.setError("Contraseña vacia, ingrese algo");
             }else{
                 if (txtcontra.equals(contra) && txtnombre.equals(user)){
                     Intent intent = new Intent(this, Activity2.class);

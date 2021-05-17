@@ -18,13 +18,14 @@ public class Activity2 extends AppCompatActivity {
         Intent intent = getIntent();
         String nombre = intent.getStringExtra(MainActivity.EXTRA_USUARIO);
         TextView txtnombre = findViewById(R.id.txtSaludo);
-        txtnombre.setText("Bienvenido "+nombre);
+        txtnombre.setText("Hola, como estas, bievenido "+nombre);
 
     }
 
     public void mapa(View view){
         Intent intent = new Intent(this, MapsActivity.class);
         //intent.putExtra(EXTRA_USUARIO, txtnombre);
+
         startActivity(intent);
 
     }
