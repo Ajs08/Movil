@@ -17,8 +17,6 @@ public class Activity2 extends AppCompatActivity {
         //Cargar nombre usuario
         Intent intent = getIntent();
         String nombre = intent.getStringExtra(MainActivity.EXTRA_USUARIO);
-        TextView txtnombre = findViewById(R.id.txtSaludo);
-        txtnombre.setText("Hola, como estas, bievenido "+nombre);
 
     }
 
