@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         String txtnombre = usuario.getText().toString();
         String txtcontra = pass.getText().toString();
         if (txtnombre.isEmpty()){
-            usuario.setError("El nombre no puede estar en vacio");
+            usuario.setError("El nombre no puede estar en vacio, rellenelo");
         }else{
             if (txtcontra.isEmpty()){
                 pass.setError("Contraseña vacia, ingrese algo");
