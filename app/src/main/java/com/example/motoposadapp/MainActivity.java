@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
                 pass.setError("Contraseña vacia, ingrese algo");
             }else{
                 if (txtcontra.equals(contra) && txtnombre.equals(user)){
-                    Intent intent = new Intent(this, Activity2.class);
+                    Intent intent = new Intent(this, MenuActivity.class);
                     intent.putExtra(EXTRA_USUARIO, txtnombre);
                     startActivity(intent);
                 }
