@@ -2,4 +2,50 @@
     <string name="app_name">MotoPosadApp</string>
     <string name="Bienvenida">Bienvenido, Ingrese su usuario y contraseña</string>
     <string name="title_activity_maps">Map</string>
+    <string name="departamento1">Atlántico</string>
+    <string name="departamento2">Bolívar</string>
+    <string name="departamento3">Magdalena</string>
+    <string name="departamento4">La Guajira</string>
+    <string name="departamento5">Cesar</string>
+    <string name="departamento6">Córdoba </string>
+    <string name="departamento7">Sucre</string>
+    
+    <string-array name="departamento1">
+        <item>Barranquilla</item>
+        <item>Soledad</item>
+        <item>Malambo</item>
+        <item>Puerto Colombia</item>
+    </string-array>
+
+    <string-array name="departamento2">
+        <item>Cartagena</item>
+        <item>Magangué</item>
+        <item>El Carmen de Bolívar</item>
+        <item>Arjona</item>
+    </string-array>
+
+    <string-array name="departamento3">
+        <item>Santa Marta</item>
+        <item>Ciénaga</item>
+        <item>Plato</item>
+    </string-array>
+
+    <string-array name="departamento4">
+        <item>Rioacha</item>
+        <item>Maicao</item>
+    </string-array>
+
+    <string-array name="departamento5">
+        <item>Valledupar</item>
+        <item>Aguachica</item>
+    </string-array>
+
+    <string-array name="departamento6">
+        <item>Montería</item>
+    </string-array>
+
+    <string-array name="departamento7">
+        <item>Sincelejo</item>
+        <item>Corozal</item>
+    </string-array>
 </resources>
