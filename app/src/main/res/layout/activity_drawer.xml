@@ -5,34 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawer_layout"
+    tools:openDrawer="start"
     tools:context=".DrawerActivity"
     android:background="#282846">
 
-    <LinearLayout
+    <include
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <include
-            layout="@layout/main_toolbar"/>
-        
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Home"
-            android:textSize="50sp"
-            android:textStyle="bold"
-            android:gravity="center"/>
-
-    </LinearLayout>
-
-    <RelativeLayout
-        android:layout_width="300dp"
+        layout="@layout/main_nav_drawer"
+        />
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:background="@android:color/white">
+        android:id="@+id/nav_view"/>
 
-        <include
-            layout="@layout/main_nav_drawer"/>
-    </RelativeLayout>
+
 </androidx.drawerlayout.widget.DrawerLayout>
