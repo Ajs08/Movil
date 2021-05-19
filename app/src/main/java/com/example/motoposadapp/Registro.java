@@ -19,14 +19,13 @@ public class Registro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
 
-        TextView btn = (TextView)findViewById(R.id.YaTieneCuenta);
         Button registro = findViewById(R.id.btnRegistro);
         final TextView nombre = findViewById(R.id.txtNombres);
         final TextView apellidos = findViewById(R.id.txtApellidos);
         final TextView correo = findViewById(R.id.txtCorreo);
         final TextView contra = findViewById(R.id.txtContrasena);
         final TextView telefono = findViewById(R.id.txtTelefono);
-
+        TextView btn = (TextView)findViewById(R.id.YaTieneCuenta);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
