@@ -9,7 +9,7 @@
     <string name="departamento5">Cesar</string>
     <string name="departamento6">Córdoba </string>
     <string name="departamento7">Sucre</string>
-    
+
     <string-array name="departamento1">
         <item>Barranquilla</item>
         <item>Soledad</item>
