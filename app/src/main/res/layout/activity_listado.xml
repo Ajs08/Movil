@@ -8,9 +8,22 @@
     android:background="#282846"
     >
 
+    <TextView
+        android:id="@+id/tituloLista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Escoja el departamento"
+        android:textAlignment="center"
+        android:textColor="#d8ebe4"
+        android:textSize="25sp" />
+
     <ExpandableListView
         android:id="@+id/ListaDesplegable"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="538dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dp" />
 
 </RelativeLayout>
