@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MenuActivity"
     android:background="#282846">
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -18,7 +19,7 @@
             android:src="@drawable/posada" />
 
         <LinearLayout
-            android:layout_marginTop="-50dp"
+            android:layout_marginTop="-35dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">

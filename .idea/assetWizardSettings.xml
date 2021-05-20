@@ -18,7 +18,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/power_settings_new/baseline_power_settings_new_24.xml" />
+                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/home/baseline_home_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -29,7 +29,7 @@
                         <option name="values">
                           <map>
                             <entry key="color" value="d8ebe4" />
-                            <entry key="outputName" value="ic_power" />
+                            <entry key="outputName" value="ic_home" />
                             <entry key="sourceFile" value="C:\Users\albert\Documents\Albert\LaU\2021-1\Movil\Movil" />
                           </map>
                         </option>

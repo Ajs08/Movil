@@ -43,6 +43,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     public void registrarse(View view){
-        startActivity(new Intent(this, RegistroPosada.class));
+        startActivity(new Intent(this, DrawerActivity.class));
     }
 }

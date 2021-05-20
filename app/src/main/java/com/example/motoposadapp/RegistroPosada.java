@@ -28,38 +28,5 @@ public class RegistroPosada extends AppCompatActivity {
         final TextView capacidad = findViewById(R.id.txtCapacidad);
         final TextView descripcion = findViewById(R.id.txtDescripcion);
         final TextView disponibilidad = findViewById(R.id.txtDisponibilidad);
-
-        drawerLayout = findViewById(R.id.drawer_layout);
     }
-
-    public void ClickMenu(View view){
-        DrawerActivity.openDrawer(drawerLayout);
-    }
-
-    public void ClickLogo(View view){
-        DrawerActivity.closeDrawer(drawerLayout);
-    }
-
-    public void ClickHome(View view){
-        DrawerActivity.redirectActivity(this, RegistroPosada.class);
-    }
-
-    public void ClickDashboard(View view){
-        recreate();
-    }
-
-    public void ClickAboutUs(View view){
-        DrawerActivity.redirectActivity(this, MenuActivity.class);
-    }
-
-    public void ClickLogOut(View view){
-        DrawerActivity.logout(this);
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        DrawerActivity.closeDrawer(drawerLayout);
-    }
-
 }
