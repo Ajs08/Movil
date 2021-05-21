@@ -22,6 +22,7 @@
     <ExpandableListView
         android:id="@+id/ListaDesplegable"
         android:layout_width="match_parent"
+        android:layout_below="@id/tituloLista"
         android:layout_height="538dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="70dp" />

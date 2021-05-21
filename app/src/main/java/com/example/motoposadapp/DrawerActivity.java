@@ -46,6 +46,10 @@ public class DrawerActivity extends AppCompatActivity {
                 int id=menuItem.getItemId();
                 Fragment fragment=null;
                 switch (id){
+                    case R.id.perfil:
+                        fragment=new PerfilFragmento();
+                        loadFragment(fragment);
+                        break;
                     case R.id.home:
                         fragment=new MenuFragmento();
                         loadFragment(fragment);
