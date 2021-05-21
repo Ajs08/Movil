@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Contrase Vacia", Toast.LENGTH_SHORT).show();
             }else{
                 if(login == true){
-                    Toast.makeText(MainActivity.this, "OK, Usuario registrado", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(this, MenuActivity.class);
+                    Toast.makeText(MainActivity.this, "Bienvenido", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(this, DrawerActivity.class);
                     intent.putExtra(EXTRA_USUARIO, txtnombre);
                     startActivity(intent);
                 }

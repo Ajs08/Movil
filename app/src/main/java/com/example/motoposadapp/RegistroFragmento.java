@@ -7,6 +7,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.motoposadapp.Data.Modelo;
+import com.example.motoposadapp.Data.Posadas;
+import com.example.motoposadapp.Data.Usuarios;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +66,41 @@ public class RegistroFragmento extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_registro_fragmento, container, false);
+
+        View v = inflater.inflate(R.layout.fragment_registro_fragmento, container, false);
+
+        Button registro = v.findViewById(R.id.btnRegistroPosada);
+        final TextView nombre = v.findViewById(R.id.txtNombrePosada);
+        final TextView latitud = v.findViewById(R.id.txtApellidos);
+        final TextView longitud = v.findViewById(R.id.txtCorreo);
+        final TextView capacidad = v.findViewById(R.id.txtContrasena);
+        final TextView descripcion = v.findViewById(R.id.txtTelefono);
+        final TextView disponibilidad = v.findViewById(R.id.txtTelefono);
+        TextView btn = (TextView)v.findViewById(R.id.YaTieneCuenta);
+
+        registro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Modelo modelo = new Modelo();
+                Posadas user= new Posadas();
+                user.setId(1);
+                user.setNombre(nombre.getText().toString());
+                user.setLatitud(latitud.getText().toString());
+                user.setLongitud(longitud.getText().toString());
+                user.setCapacidad(capacidad.getText().toString());
+                user.setDescripcion(descripcion.getText().toString());
+                user.setDisponibilidad(disponibilidad.getText().toString());
+                user.setEstado("Activo");
+
+                boolean insertarUsuario = modelo.insertaUsuario(Registro.this, user);
+                if (insertarUsuario == true){
+
+                    Toast.makeText(Registro.this, "OK, Posada registrada", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(Registro.this, "NO", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        return v;
     }
 }
