@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:title="Home"
+            android:icon="@drawable/ic_home"
+            android:id="@+id/home"
+            />
+        <item
+            android:title="Agregar Posada"
+            android:icon="@drawable/ic_posada"
+            android:id="@+id/search"
+            />
+        <item
+            android:title="Ajustes"
+            android:icon="@drawable/ic_settings"
+            android:id="@+id/settings"
+            />
+        <item
+            android:title="Cerrar sesión"
+            android:icon="@drawable/ic_posada"
+            android:id="@+id/LogOut"
+            />
+    </group>
+</menu>

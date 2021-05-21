@@ -9,7 +9,10 @@
     <string name="departamento5">Cesar</string>
     <string name="departamento6">Córdoba </string>
     <string name="departamento7">Sucre</string>
-    
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
     <string-array name="departamento1">
         <item>Barranquilla</item>
         <item>Soledad</item>
@@ -48,4 +51,6 @@
         <item>Sincelejo</item>
         <item>Corozal</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

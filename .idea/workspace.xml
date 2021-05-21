@@ -18,6 +18,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="db5c52f6-48fc-4bd6-b456-a168d1eafa42" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/modules/app/MotoPosadApp.app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
@@ -83,12 +84,15 @@
       <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
+=======
+    <list default="true" id="db5c52f6-48fc-4bd6-b456-a168d1eafa42" name="Default Changelist" comment="" />
+>>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[KPS4C19131000009]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -149,8 +153,8 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.example.motoposadapp" />
+    <key name="android.template.parentActivityClass">
+      <recent name="" />
     </key>
     <key name="android.template.packageName">
       <recent name="com.example.motoposadapp" />
@@ -170,8 +174,8 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\albert\Documents\Albert\LaU\2021-1\Movil\Movil\app\src\main\res\drawable" />
     </key>
-    <key name="android.template.parentActivityClass">
-      <recent name="" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.motoposadapp" />
     </key>
   </component>
   <component name="RunManager">
