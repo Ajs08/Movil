@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import java.security.PublicKey;
 import java.util.ArrayList;
@@ -45,7 +46,30 @@ public class Modelo {
             return false;
         }
     }
+    public boolean insertarPosada(Context context, Posadas u){
+        //String sql="INSERT INTO usuarios (id, nombres, apellidos, telefono, fecha_nacimiento, correo, contrasena, perfil, estado) VALUES("+
+//        u.getId()+",'"+u.getNombres()+"','"+u.getApellidos()+"','"+u.getTelefono()+"','"+u.getFecha_nacimiento()+"','"+u.getCorreo()+
+//                "','"+u.getContrasena()+"','"+u.getPerfil()+"','"+u.getEstado()+"')";
+//        try{
+//            db.execSQL(sql);
+//            res = true;
+//        }catch (Exception e){
+//
+//        }
+        SQLiteDatabase db = this.getConn(context);
 
+            ContentValues cv= new ContentValues();
+            cv.put("nombres",u.getNombre());
+            cv.put("latitud",u.getLatitud());
+            cv.put("longitud",u.getLongitud());
+            cv.put("capacidad",u.getCapacidad());
+            cv.put("descripcion",u.getDescripcion());
+            cv.put("disponibilidad",u.getDisponibilidad());
+            cv.put("estado",u.getEstado());
+
+            return (db.insert("posadas", null,cv)>0);
+
+    }
     public int buscarUsuario(Context context, String correo){
         int x = 0;
         ArrayList<Usuarios> lista =selecUsuarios(context);
@@ -159,6 +183,46 @@ public class Modelo {
             }while(cr.moveToNext());
         }
         return lista;
+    }
+
+    public Usuarios buscarU(Context context, String correo){
+        Log.d("searching", correo);
+        Usuarios u = new Usuarios();
+        SQLiteDatabase db = this.getConn(context);
+        Cursor cr = db.rawQuery("select * from usuarios where correo = '" + correo + "'", null);
+        if(cr != null && cr.moveToFirst()){
+            do{
+                if (cr.getString(5).equals(correo)){
+                    u.setId(cr.getInt(0));
+                    u.setNombres(cr.getString(1));
+                    u.setApellidos(cr.getString(2));
+                    u.setTelefono(cr.getString(3));
+                    u.setFecha_nacimiento(cr.getString(4));
+                    u.setCorreo(cr.getString(5));
+                    u.setContrasena(cr.getString(6));
+                    u.setPerfil(cr.getString(7));
+                    u.setPlaca_moto(cr.getString(8));
+                    u.setModelo_moto(cr.getString(9));
+                    u.setMarca_moto(cr.getString(10));
+                    u.setEstado(cr.getString(11));
+                }
+            }while (cr.moveToNext());
+        }
+        return u;
+    }
+    public int actualizar(Context context, String correo, Usuarios usuario){
+        int respuesta;
+        SQLiteDatabase db = this.getConn(context);
+
+        ContentValues cv= new ContentValues();
+        cv.put("nombres",usuario.getNombres());
+        cv.put("apellidos",usuario.getApellidos());
+        cv.put("telefono",usuario.getTelefono());
+        cv.put("contrasena",usuario.getContrasena());
+
+        respuesta = db.update("usuarios", cv, "correo = ?", new String[] {usuario.getCorreo()});
+
+        return respuesta;
     }
 
 }

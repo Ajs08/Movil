@@ -39,6 +39,8 @@ public class DrawerActivity extends AppCompatActivity {
 
         loadFragment(new MenuFragmento());
 
+        final Intent i = getIntent();
+
         navigationView=findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -47,7 +49,7 @@ public class DrawerActivity extends AppCompatActivity {
                 Fragment fragment=null;
                 switch (id){
                     case R.id.perfil:
-                        fragment=new PerfilFragmento();
+                        fragment=new PerfilFragmento(i.getStringExtra("com.example.motoposadapp.USUARIO"));
                         loadFragment(fragment);
                         break;
                     case R.id.home:

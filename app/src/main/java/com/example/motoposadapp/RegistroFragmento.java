@@ -87,17 +87,17 @@ public class RegistroFragmento extends Fragment {
                 user.setNombre(nombre.getText().toString());
                 user.setLatitud(latitud.getText().toString());
                 user.setLongitud(longitud.getText().toString());
-                user.setCapacidad(capacidad.getText().toString());
+                user.setCapacidad(Integer.parseInt(capacidad.getText().toString()));
                 user.setDescripcion(descripcion.getText().toString());
                 user.setDisponibilidad(disponibilidad.getText().toString());
                 user.setEstado("Activo");
 
-                boolean insertarUsuario = modelo.insertaUsuario(Registro.this, user);
+                boolean insertarUsuario = modelo.insertarPosada(getContext(), user);
                 if (insertarUsuario == true){
 
-                    Toast.makeText(Registro.this, "OK, Posada registrada", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "OK, Posada registrada", Toast.LENGTH_SHORT).show();
                 }else{
-                    Toast.makeText(Registro.this, "NO", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "NO", Toast.LENGTH_SHORT).show();
                 }
             }
         });

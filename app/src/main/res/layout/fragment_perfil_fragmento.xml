@@ -45,7 +45,7 @@
             app:layout_constraintVertical_bias="0.057" />
 
         <Button
-            android:id="@+id/btnRegistro"
+            android:id="@+id/btnActualizar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
