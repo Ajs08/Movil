@@ -43,7 +43,12 @@ public class MotoPosadAppHelper extends SQLiteOpenHelper{
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(tabla_Usuario);
-
+        db.execSQL(tabla_Calificacion);
+        db.execSQL(tabla_Ciudad);
+        db.execSQL(tabla_Departamento);
+        db.execSQL(tabla_Posada);
+        db.execSQL(tabla_Posada_img);
+        db.execSQL(tabla_Reserva);
     }
 
     @Override

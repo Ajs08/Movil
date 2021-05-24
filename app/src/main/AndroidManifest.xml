@@ -15,6 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".RegistroPosada"></activity>
         <activity android:name=".FormDepartamento" />
         <activity android:name=".FormCiudad" />
         <activity android:name=".DrawerActivity" />

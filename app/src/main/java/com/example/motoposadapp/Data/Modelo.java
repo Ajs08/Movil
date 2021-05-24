@@ -167,6 +167,45 @@ public class Modelo {
         }
         return lista;
     }
+
+    public boolean insertaPosada(Context context, Posadas p){
+        SQLiteDatabase db = this.getConn(context);
+        if(db!=null){
+            ContentValues cv= new ContentValues();
+            cv.put("nombre", p.getNombre());
+            cv.put("latitud", p.getLatitud());
+            cv.put("longitud", p.getLongitud());
+            cv.put("capacidad", p.getCapacidad());
+            cv.put("descripcion", p.getDescripcion());
+            cv.put("disponibilidad", p.getDisponibilidad());
+            cv.put("estado", p.getEstado());
+            return (db.insert("tabla_Posada", null, cv)>0);
+        }else{
+            return false;
+        }
+    }
+
+    public boolean insertarDepartamento(Context context, Departamentos d){
+        SQLiteDatabase db = this.getConn(context);
+        if (buscarDepartamento(context, d.getNombre())== 0){
+            ContentValues cv= new ContentValues();
+            cv.put("nombre",d.getNombre());
+            cv.put("estado",d.getEstado());
+            return (db.insert("departamentos", null,cv)>0);
+        }else {
+            return false;
+        }
+    }
+    public int buscarDepartamento(Context context, String nombre_Dep){
+        int x = 0;
+        ArrayList<Departamentos> lista =selectDepartamentos(context);
+        for (Departamentos us:lista){
+            if(us.getNombre().equals(nombre_Dep)){
+                x++;
+            }
+        }
+        return x;
+    }
     public ArrayList<Departamentos> selectDepartamentos(Context context){
         ArrayList<Departamentos> lista = new ArrayList<Departamentos>();
         lista.clear();
